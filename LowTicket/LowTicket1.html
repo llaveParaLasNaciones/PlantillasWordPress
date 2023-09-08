@@ -1,19 +1,64 @@
-<html <?php language_attributes(); ?>>
+<html>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title(); ?></title>
-    <?php wp_head(); ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>LowTicket</title>
 
     <style>
-        .video-container {
-            transition: opacity 0.5s;
-            opacity: 0; /* Oculta los videos por defecto */
+        /* Oculta todos los videos que no están activos */
+        .video-container:not(.current) {
+            display: none;
+        }
+        
+        /* Estilos para los botones de navegación */
+        #prev-btn, #next-btn {
+            margin-right: 10px;
+            background-color: #ccc;
+            color: #333;
+            border: 1px solid #333;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        #prev-btn:hover, #next-btn:hover {
+            background-color: #333;
+            color: #fff;
         }
 
-        .current {
-            opacity: 1; /* Muestra el video actual */
+        @media (max-width: 768px) {
+            /* Estilos para pantallas pequeñas (tablets y móviles) */
+
+            .titulo1 {
+                font-size: 20px;
+            }
+
+            .tituloPrincipal {
+                font-size: 28px;
+            }
+
+            .Image1 {
+                max-width: 100%;
+            }
+
+            .titulo2 {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+
+            .elemento {
+                font-size: 18px;
+            }
+
+            .contenedorPrincipal {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contenedor2 {
+                padding: 10px;
+            }
         }
     </style>
 
@@ -60,7 +105,7 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body>
     <div style="font-family: Arial, sans-serif; background-color: #001449; color: #fff; margin: 0; padding: 0;"
         class="container">
         <p style="color:#001449;">espacio</p>
@@ -94,9 +139,11 @@
             </div>
         </div>
         <div style="text-align:center; padding-bottom: 30px;">
-            <button type="button" class="wj-embed-button" data-webinarHash="6y6n1sg6"
-                style="border: 2px solid rgba(0, 0, 0, 0.5); background: rgba(41, 182, 246, 0.95); color: rgb(255, 255, 255); font-size: 24px; padding: 18px 80px; box-shadow: none; border-radius: 4px; white-space: normal; font-weight: 700; line-height: 1.3; cursor: pointer; font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; word-break: break-word; margin: auto;">Regístrate
-                Aquí</button>
+            <div style="text-align:center;">
+<button type="button" class="wj-embed-button" data-webinarHash="m9pn8fkr" style="border: 2px solid rgba(0, 0, 0, 0.5); background: rgba(41, 182, 246, 0.95); color: rgb(255, 255, 255); font-size: 24px; padding: 18px 80px; box-shadow: none; border-radius: 4px; white-space: normal; font-weight: 700; line-height: 1.3; cursor: pointer; font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; word-break: break-word; margin: auto;">Regístrate Aquí</button>
+<script src="https://event.webinarjam.com/register/m9pn8fkr/embed-button?formTemplate=6&formColor=2"></script>
+</div>
+
             <script
                 src="https://event.webinarjam.com/register/6y6n1sg6/embed-button?formTemplate=6&formColor=2"></script>
             <h4 style="text-align: center; padding-bottom: 10px; padding-top: 0%; font-size: 20px; color: #ffffff;">No
@@ -163,9 +210,11 @@
             </p>
         </div>
         <div style="text-align:center; padding-bottom: 30px; padding-top: 20px;">
-            <button type="button" class="wj-embed-button" data-webinarHash="6y6n1sg6"
-                style="border: 2px solid rgba(0, 0, 0, 0.5); background: rgba(41, 182, 246, 0.95); color: rgb(255, 255, 255); font-size: 24px; padding: 18px 80px; box-shadow: none; border-radius: 4px; white-space: normal; font-weight: 700; line-height: 1.3; cursor: pointer; font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; word-break: break-word; margin: auto;">Regístrate
-                Aquí</button>
+            <div style="text-align:center;">
+<button type="button" class="wj-embed-button" data-webinarHash="m9pn8fkr" style="border: 2px solid rgba(0, 0, 0, 0.5); background: rgba(41, 182, 246, 0.95); color: rgb(255, 255, 255); font-size: 24px; padding: 18px 80px; box-shadow: none; border-radius: 4px; white-space: normal; font-weight: 700; line-height: 1.3; cursor: pointer; font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif; word-break: break-word; margin: auto;">Regístrate Aquí</button>
+<script src="https://event.webinarjam.com/register/m9pn8fkr/embed-button?formTemplate=6&formColor=2"></script>
+</div>
+
             <script
                 src="https://event.webinarjam.com/register/6y6n1sg6/embed-button?formTemplate=6&formColor=2"></script>
         </div>
@@ -175,72 +224,72 @@
         <h2 style="font-size: 28px; color: #001449;">Testimonios</h2>
         <div class="video-carousel" style="max-width: 800px; margin: 0 auto;">
             <div class="video-container current" style="display: block;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/nrUvlEB-Igk?si=XnCieOueF1woi8bs"
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nrUvlEB-Igk"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/4kVTE0IlzVo?si=Q_d5SEY_ThQFTte3"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4kVTE0IlzVo"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/0ZFSbhuLckU?si=zLrfN_gGh7QX6rka"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0ZFSbhuLckU"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/f39I0vyRbf0?si=aQ1ktNjkp9JT9Chu"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/f39I0vyRbf0"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vFdarXAiLl4?si=ya7mtB-CepJ1RiAN"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vFdarXAiLl4"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/DCkL8xD0uYQ?si=_VBjgHaTr7e0KpwT"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DCkL8xD0uYQ"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LeJFkAhmJBE?si=UcKxnjl44iEm3Sok"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LeJFkAhmJBE"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/vriboJE05FQ?si=v7Dyp5_muUH2Ei-V"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vriboJE05FQ"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/x09ORbj12TA?si=9ruWCEpRsb1cL9pU"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/x09ORbj12TA"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QjJZAgGbGik?si=J4CHw3eC5lcIILBC"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QjJZAgGbGik"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kAEz1ANg7AU?si=X9DYPDEHwiu0voZy"
+            <div class="video-container current" style="display: none;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kAEz1ANg7AU"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="display: none;">
+            <div class="video-container current" style="display: none;">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/nrUvlEB-Igk?si=SrdP7Barngzf8iIC"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -254,42 +303,42 @@
             style="background-color: #ccc; color: #333; border: 1px solid #333; font-size: 20px;">→</button>
     </div>
     <!-- Script para el carrusel de videos -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const videoCarousel = document.querySelector('.video-carousel');
-            const videos = videoCarousel.querySelectorAll('.video-container');
-            let currentIndex = 0;
-            const totalVideos = videos.length;
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const videoCarousel = document.querySelector('.video-carousel');
+        const videos = videoCarousel.querySelectorAll('.video-container');
+        let currentIndex = 0;
+        const totalVideos = videos.length;
 
-            function showVideo(index) {
-                videos[currentIndex].style.opacity = '0';
-                videos[currentIndex].classList.remove('current');
-                currentIndex = (index + totalVideos) % totalVideos;
-                videos[currentIndex].style.opacity = '1';
-                videos[currentIndex].classList.add('current');
-            }
+        function showVideo(index) {
+            videos[currentIndex].style.opacity = '0';
+            videos[currentIndex].classList.remove('current');
+            currentIndex = (index + totalVideos) % totalVideos;
+            videos[currentIndex].style.opacity = '1';
+            videos[currentIndex].classList.add('current');
+        }
 
-            // Mostrar el primer video al cargar la página
-            showVideo(currentIndex);
+        // Mostrar el primer video al cargar la página
+        showVideo(currentIndex);
 
-            // Función para avanzar al siguiente video
-            function nextVideo() {
-                showVideo(currentIndex + 1);
-            }
+        // Función para avanzar al siguiente video
+        function nextVideo() {
+            showVideo(currentIndex + 1);
+        }
 
-            // Reproducir el siguiente video automáticamente después de 5 segundos
-            setInterval(nextVideo, 5000);
+        // Reproducir el siguiente video automáticamente después de 5 segundos
+        setInterval(nextVideo, 5000);
 
-            // Manejo de eventos para cambiar entre videos
-            document.querySelector('#prev-btn').addEventListener('click', function () {
-                showVideo(currentIndex - 1);
-            });
-
-            document.querySelector('#next-btn').addEventListener('click', function () {
-                showVideo(currentIndex + 1);
-            });
+        // Manejo de eventos para cambiar entre videos
+        document.querySelector('#prev-btn').addEventListener('click', function () {
+            showVideo(currentIndex - 1);
         });
-    </script>
+
+        document.querySelector('#next-btn').addEventListener('click', function () {
+            showVideo(currentIndex + 1);
+        });
+    });
+</script>
     <section style="padding-top: 15px; font-size: small; text-align: center;">
         <p>
             Este sitio no es parte del sitio web de Facebook o Facebook, Inc. <br>
@@ -326,10 +375,8 @@
             responsabilidad completa y otras restricciones.
         </p>
     </section>
+<script src="https://event.webinarjam.com/register/m9pn8fkr/embed-bar?buttonText=Reg%C3%ADstrate%20al%20mover%20prof%C3%A9tico%20&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=6&formColor=2"></script>
 
-    <script
-     src="https://event.webinarjam.com/register/6y6n1sg6/embed-bar?buttonText=Registrarse%20al%20Mover%20Prof%C3%A9tico&buttonBgColor=%23000000&buttonBgOpacity=0.5&barBgColor=%2329b6f6&barBgOpacity=0.95&formTemplate=6&formColor=2">
-    </script>
 </body>
 
 </html>
